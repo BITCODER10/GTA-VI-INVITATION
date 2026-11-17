@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#050510" />
+    <meta
+      name="description"
+      content="EMEA access required. GTA VI PS5 Gameplay — Saturday."
+    />
+    <title>EMEA ACCESS // GTA VI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- LOCK SCREEN -->
+    <section id="gate" class="gate" aria-label="Access gate">
+      <div class="gate__aurora" aria-hidden="true"></div>
+      <div class="gate__grid" aria-hidden="true"></div>
+
+      <div class="gate__shell">
+        <p class="gate__eyebrow">
+          <span class="pulse-dot"></span>
+          SECURE CHANNEL · EMEA NODE
+        </p>
+
+        <h1 class="gate__brand">VICE<span>OS</span></h1>
+        <p class="gate__hint">Credential required to decrypt mission brief</p>
+
+        <form id="gate-form" class="gate__form" autocomplete="off">
+          <label class="gate__label" for="access-code">
+            <span class="gate__prefix">EMEA</span>
+            <input
+              id="access-code"
+              name="access"
+              type="text"
+              inputmode="text"
+              autocapitalize="characters"
+              autocorrect="off"
+              spellcheck="false"
+              maxlength="24"
+              placeholder="······"
+              aria-describedby="gate-status"
+            />
+            <span class="gate__suffix">USER</span>
+          </label>
+
+          <button type="submit" class="gate__submit">AUTHENTICATE</button>
+          <p id="gate-status" class="gate__status" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="gate__footer">UNAUTHORIZED ACCESS WILL BE LOGGED</p>
+      </div>
+    </section>
+
+    <!-- INVITE -->
+    <main id="invite" class="invite" hidden>
+      <header class="hero">
+        <div class="hero__posters" aria-hidden="true">
+          <img
+            class="hero__poster is-on"
+            src="assets/poster-skyline.gif"
+            alt=""
+            width="220"
+            height="293"
+          />
+          <img
+            class="hero__poster"
+            src="assets/poster-rooftop.gif"
+            alt=""
+            width="220"
+            height="293"
+          />
+          <img
+            class="hero__poster"
+            src="assets/poster-chase.gif"
+            alt=""
+            width="220"
+            height="293"
+          />
+          <div class="hero__posters-veil"></div>
+        </div>
+
+        <div class="hero__skyline" aria-hidden="true">
+          <svg viewBox="0 0 400 120" preserveAspectRatio="xMidYMax meet">
+            <defs>
+              <linearGradient id="neonGlow" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ff2d95" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.3" />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#neonGlow)"
+              d="M0 120 V78 H18 V55 H32 V78 H48 V40 H62 V78 H78 V62 H90 V30 H104 V62 H118 V78 H140 V48 H155 V20 H168 V48 H185 V78 H210 V35 H228 V10 H242 V35 H258 V78 H280 V55 H295 V78 H320 V42 H338 V78 H360 V60 H378 V78 H400 V120 Z"
+            />
+            <rect x="148" y="8" width="4" height="12" fill="#00f0ff" opacity="0.9" />
+            <rect x="232" y="-2" width="4" height="12" fill="#ff2d95" opacity="0.9" />
+          </svg>
+        </div>
+
+        <div class="hero__wanted" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <p class="hero__chip">
+          <span class="pulse-dot"></span>
+          LIVE BRIEFING
+        </p>
+        <h1 class="hero__title" data-text="GTA VI">GTA VI</h1>
+        <p class="hero__sub">PS5 GAMEPLAY</p>
+        <p class="hero__tagline">Saturday. Just show up.</p>
+
+        <div class="countdown" id="countdown" aria-label="Countdown to party">
+          <div class="countdown__unit">
+            <span data-unit="days">00</span>
+            <small>DAYS</small>
+          </div>
+          <div class="countdown__unit">
+            <span data-unit="hours">00</span>
+            <small>HRS</small>
+          </div>
+          <div class="countdown__unit">
+            <span data-unit="mins">00</span>
+            <small>MIN</small>
+          </div>
+          <div class="countdown__unit">
+            <span data-unit="secs">00</span>
+            <small>SEC</small>
+          </div>
+        </div>
+
+        <a class="cta" href="#rsvp">I'M IN</a>
+      </header>
+
+      <div class="poster-reel" aria-hidden="true">
+        <div class="poster-reel__track">
+          <img src="assets/poster-skyline.gif" alt="" width="220" height="293" />
+          <img src="assets/poster-rooftop.gif" alt="" width="220" height="293" />
+          <img src="assets/poster-chase.gif" alt="" width="220" height="293" />
+        </div>
+      </div>
+
+      <section class="section briefing" id="briefing">
+        <p class="section__eyebrow">01 · MISSION BRIEFING</p>
+        <h2 class="section__title">The drop</h2>
+        <p class="section__lead" id="brief-what"></p>
+        <dl class="meta">
+          <div>
+            <dt>WHEN</dt>
+            <dd id="brief-when"></dd>
+          </div>
+          <div>
+            <dt>WHERE</dt>
+            <dd id="brief-where"></dd>
+          </div>
+          <div>
+            <dt>HOST</dt>
+            <dd id="brief-host"></dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="section loadout" id="loadout">
+        <p class="section__eyebrow">02 · LOADOUT</p>
+        <h2 class="section__title">Just come</h2>
+        <ul class="loadout__list" id="loadout-list"></ul>
+      </section>
+
+      <section class="section rsvp" id="rsvp">
+        <p class="section__eyebrow">03 · CONFIRM</p>
+        <h2 class="section__title">Say you're in</h2>
+        <p class="section__lead">One tap. No forms. Just vibes.</p>
+        <div class="rsvp__actions">
+          <button type="button" class="cta cta--ghost" id="rsvp-copy">
+            COPY RSVP TEXT
+          </button>
+          <a class="cta" id="rsvp-link" href="#" hidden>PING HOST</a>
+        </div>
+        <p class="rsvp__toast" id="rsvp-toast" role="status" aria-live="polite"></p>
+      </section>
+
+      <footer class="footer">
+        <p>VICEOS · EMEA CLEARED · HAVE FUN OUT THERE</p>
+      </footer>
+    </main>
+
+    <div id="unlock-overlay" class="unlock-overlay" hidden aria-hidden="true">
+      <p class="unlock-overlay__text">CREDENTIALS ACCEPTED</p>
+      <p class="unlock-overlay__sub">DECRYPTING BRIEFING…</p>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
